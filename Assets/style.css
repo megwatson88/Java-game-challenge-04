@@ -1,0 +1,20 @@
+*{
+    background-color: #f2e394;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+.answer-boxes {
+    color: black;
+    background-color: #ffeead;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+.questions-box {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium
+    ;
+}
