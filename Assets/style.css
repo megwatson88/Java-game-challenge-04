@@ -1,15 +1,16 @@
-*{
+* {
     background-color: #d5e1df;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+    box-sizing: border-box; 
+    justify-content: center;
 }
 body{
     padding:0;
     margin: 0;
     justify-content: center;
-    display: flex;
+    align-items: center;
     width: 100vw;
     height: 100vh;
-    align-items: center;
 }
 .answer-boxes {
     color: black;
@@ -27,15 +28,11 @@ body{
     ;
 }
 
-:root {
-    --hue-neutral: 200;
-    --hue-wrong:0;
-    --hue-correct:145;
-}
+
 .contianer {
     width: 800px;
     max-width: 80%;
-    background-color: #d5e1df;
+    background-color: white;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
@@ -46,7 +43,7 @@ body{
     gap: 10px;
 }
 .btn{
-    --hue: var(var(--hue-neutral));
+   
     background-color: wheat;
     border: 1px solid black;
 }
