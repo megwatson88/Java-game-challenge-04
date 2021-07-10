@@ -1,20 +1,29 @@
 const startButton = document.getElementById('start-btn');
-const questionsContainer = document.getElementById('questionContainer');
+const questionsContainer = document.getElementById('question-container');
+let shuffledQuestoins, currentQuestionsIndex;
+const questionElement = document.getElementById('question');
+const answerButtonsElements = document.getElementById('answer-buttons')
+;
 startButton.addEventListener('click', startGame);
 
-function startGame(){
+function startGame() {
     console.log('started');
     startButton.classList.add('hide')
-    questionsContainerElement.classList.remove(hide)
+    shuffledQuestions = myQuestions.sort(() => Math.random() - .5)
+    currentQuestionsIndex = 0
+    questionsContainerElement.classList.remove('hide')
     setNextQuestion()
 
 };
 
-function setNextQuestion(){
-
+function setNextQuestion() {
+    showquestions(shuffledQuestions[currentQuestionsIndex])
+};
+function showQuestions(question){
+    questionElement.innerText = myQuestion.myQuestion
 };
 
-function selectAnswer(){
+function selectAnswer() {
 
 };
 
@@ -51,7 +60,7 @@ const myQuestions = [
     },
     {
         question: "What is the correct for loop syntax?",
-        answers:[
+        answers: [
             "for(var i = 0; i< ;  i ++ ) {};",
             "For(var I = 0; i > ; I++) {}",
             "For(var i = 0; i >; i++ ) {};",
@@ -60,27 +69,8 @@ const myQuestions = [
         correctAnswer: "for(var i = 0; i< ;  i ++ ) {};"
     }
 ]
-let startScreen = document.getElementById("start-screen");
 
-addEventListener.onclick()
-function startQuiz() {
-    document.getElementById("start-screen").style.visibility = "hidden";
+    //link start button to the timer, build a funtion
+    // 5-6 questions 
+    //let timerStart = setTimeout(())
 
-function generateQuiz(question, quizContainer, resultsContainer, submitButton) {
-    function showQuestions(questions, questionsContainer) {
-
-    }
-    function showResults(questoins, quizContainer, resultsContainer) {
-
-    }
-    showQuestions(questions, quizContainer);
-
-    submitButton.onclick = fucntion(); {
-        showResults(questions, quizContainer, resultsContianer);
-    }
-}
-//link start button to the timer, build a funtion
-// 5-6 questions 
-//let timerStart = setTimeout(())
-
-}
