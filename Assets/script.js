@@ -1,10 +1,12 @@
 const startButton = document.getElementById('start-btn');
-
+const questionsContainer = document.getElementById('questionContainer');
 startButton.addEventListener('click', startGame);
 
 function startGame(){
     console.log('started');
     startButton.classList.add('hide')
+    questionsContainerElement.classList.remove(hide)
+    setNextQuestion()
 
 };
 
@@ -16,30 +18,7 @@ function selectAnswer(){
 
 };
 
-
-let startScreen = document.getElementById("start-screen");
-
-addEventListener.onclick()
-function startQuiz() {
-    document.getElementById("start-screen").style.visibility = "hidden";
-
-function generateQuiz(question, quizContainer, resultsContainer, submitButton) {
-    function showQuestions(questions, questionsContainer) {
-
-    }
-    function showResults(questoins, quizContainer, resultsContainer) {
-
-    }
-    showQuestions(questions, quizContainer);
-
-    submitButton.onclick = fucntion(); {
-        showResults(questions, quizContainer, resultsContianer);
-    }
-}
-//link start button to the timer, build a funtion
-// 5-6 questions 
-//let timerStart = setTimeout(())
-var myQuestions = [
+const myQuestions = [
     {
         question: "What is a function",
         answers: [
@@ -81,4 +60,27 @@ var myQuestions = [
         correctAnswer: "for(var i = 0; i< ;  i ++ ) {};"
     }
 ]
+let startScreen = document.getElementById("start-screen");
+
+addEventListener.onclick()
+function startQuiz() {
+    document.getElementById("start-screen").style.visibility = "hidden";
+
+function generateQuiz(question, quizContainer, resultsContainer, submitButton) {
+    function showQuestions(questions, questionsContainer) {
+
+    }
+    function showResults(questoins, quizContainer, resultsContainer) {
+
+    }
+    showQuestions(questions, quizContainer);
+
+    submitButton.onclick = fucntion(); {
+        showResults(questions, quizContainer, resultsContianer);
+    }
+}
+//link start button to the timer, build a funtion
+// 5-6 questions 
+//let timerStart = setTimeout(())
+
 }
