@@ -1,9 +1,27 @@
-let startScreen = document.getElementById("start-screen");
-function startQuiz() {
-    startScreen.setAttribute('class', 'hidden');
-};
-addEventListener.onclick()
+const startButton = document.getElementById('start-btn');
 
+startButton.addEventListener('click', startGame);
+
+function startGame(){
+    console.log('started');
+    startButton.classList.add('hide')
+
+};
+
+function setNextQuestion(){
+
+};
+
+function selectAnswer(){
+
+};
+
+
+let startScreen = document.getElementById("start-screen");
+
+addEventListener.onclick()
+function startQuiz() {
+    document.getElementById("start-screen").style.visibility = "hidden";
 
 function generateQuiz(question, quizContainer, resultsContainer, submitButton) {
     function showQuestions(questions, questionsContainer) {
@@ -20,7 +38,7 @@ function generateQuiz(question, quizContainer, resultsContainer, submitButton) {
 }
 //link start button to the timer, build a funtion
 // 5-6 questions 
-let timerStart = setTimeout(())
+//let timerStart = setTimeout(())
 var myQuestions = [
     {
         question: "What is a function",
@@ -51,15 +69,16 @@ var myQuestions = [
             "A data structure that can include numbers or strings",
         ],
         correctAnswer: "A data structure that can include numbers or strings",
-    }
+    },
     {
         question: "What is the correct for loop syntax?",
         answers:[
             "for(var i = 0; i< ;  i ++ ) {};",
             "For(var I = 0; i > ; I++) {}",
             "For(var i = 0; i >; i++ ) {};",
-            "for (var i = 0; i > ; i++) { };"
+            "for (var i = 0; i > ; i++) { };",
         ],
         correctAnswer: "for(var i = 0; i< ;  i ++ ) {};"
     }
 ]
+}

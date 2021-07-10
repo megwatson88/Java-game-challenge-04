@@ -6,34 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Assets/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-    <title>Java Game</title>
+    <title>Java Quiz Game</title>
 </head>
 
-<body>
-    <header class="continter ">
-        <div class="row">
-            <div class="col-md-1">
-                <a href="#high-scores"> High Score </a>
-                <p id="timer">Timer </p>
-            </div>
-        </div>
 
-    </header>
+<body>
+    <nav>
+        <a href="#high-scores"> High Score </a>
+        <p id="timer">Timer </p>
+    </nav>
     <h1>
         Welcome to your JavaScript Quiz!
     </h1>
-
     <div id="start-screen" class="start">
+        <div id="question-container" class="hide">
+            <div id="answer-box" class="btn-grid">
+                <button class="btn">Answer 1 </button>
+                <button class="btn">Answer 2 </button>
+                <button class="btn">Answer 3 </button>
+                <button class="btn">Answer 4 </button>
 
-        <div>
-            This describes the game to you user. Dont mess up or you fail.
-            <button class="start">
-                Start Screen
-            </button>
+
+            </div>
         </div>
-
-
+    </div>
+    </div>
+    <div class="control">
+        This describes the game to you user. Dont mess up or you fail.
+        <button id="start-btn" class="start-btn">
+            Start
+        </button>
 
         <!--needs to match up with the JavaScript using what is going here to describe what the game is, needs to have the hidden elements using the DOM linking -->
         <!--Create a start button using on.click -->
@@ -42,15 +44,13 @@
         <!--create different arrays using [] for each question -->
         <!-- when linking the correct answers use the correctAnswer:"sring of the answer" this is JS -->
         <!--Each question is its own DIV elelemnt to create the annimation -->
-    </div>
-    <div>
 
-    </div>
-    <script src="Assets/script.js"></script>
 
-    <h3 id="high-scores">
-        High Scores
-    </h3>
+        <script src="Assets/script.js"></script>
+
+        <h3 id="high-scores">
+            High Scores
+        </h3>
 </body>
 
 </html>
