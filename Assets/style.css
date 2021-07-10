@@ -1,11 +1,11 @@
 *{
-    background-color: #f2e394;
+    background-color: #d5e1df;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
 }
 .answer-boxes {
     color: black;
-    background-color: #ffeead;
+    background-color: #d6cbd3;
     width: 500px;
     display: flex;
     flex-wrap: wrap;

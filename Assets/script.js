@@ -1,3 +1,10 @@
+let startScreen = document.getElementById("start-screen");
+function startQuiz() {
+    startScreen.setAttribute('class', 'hidden');
+};
+addEventListener.onclick()
+
+
 function generateQuiz(question, quizContainer, resultsContainer, submitButton) {
     function showQuestions(questions, questionsContainer) {
 
@@ -11,25 +18,48 @@ function generateQuiz(question, quizContainer, resultsContainer, submitButton) {
         showResults(questions, quizContainer, resultsContianer);
     }
 }
+//link start button to the timer, build a funtion
+// 5-6 questions 
+let timerStart = setTimeout(())
 var myQuestions = [
     {
         question: "What is a function",
-        answers: {
-            a: 'A procedure to perform tasks or calculate a value.',
-            b: 'y=mx+b',
-            c: 'Direct Object Model',
-            d: 'Application Programing Interface'
-        },
-        correctAnswer: 'a'
+        answers: [
+            'A procedure to perform tasks or calculate a value.',
+            'y=mx+b',
+            'Direct Object Model',
+            'Application Programing Interface'
+        ],
+        correctAnswer: 'A procedure to perform tasks or calculate a value.'
     },
     {
-        question: "What is pseudocode? "
-            answers: {
-            a: 'A plain language description of the algorithm ',
-            b: 'A partial language of pseudonyms ',
-            c: 'A partial list of truths ',
-            d: 'A code that is partial'
-        },
-        correctAnswer = a
+        question: "What is pseudocode? ",
+        answers: [
+            'A plain language description of the algorithm ',
+            'A partial language of pseudonyms ',
+            'A partial list of truths ',
+            'A code that is partial'
+        ],
+        correctAnswer: 'A plain language description of the algorithm '
+    },
+    {
+        question: "What is an array?",
+        answers: [
+            "A dress code",
+            "A list",
+            "A French word for soda",
+            "A data structure that can include numbers or strings",
+        ],
+        correctAnswer: "A data structure that can include numbers or strings",
+    }
+    {
+        question: "What is the correct for loop syntax?",
+        answers:[
+            "for(var i = 0; i< ;  i ++ ) {};",
+            "For(var I = 0; i > ; I++) {}",
+            "For(var i = 0; i >; i++ ) {};",
+            "for (var i = 0; i > ; i++) { };"
+        ],
+        correctAnswer: "for(var i = 0; i< ;  i ++ ) {};"
     }
 ]
