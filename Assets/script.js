@@ -5,11 +5,15 @@ const questionElement = document.getElementById('question');
 const answerButtonsElements = document.getElementById('answer-buttons')
 ;
 startButton.addEventListener('click', startGame);
+nextButton.addEventListener('click', ()=> {
+    currentQuestionsIndex++
+    setNextQuestion()
+});
 
 function startGame() {
     console.log('started');
     startButton.classList.add('hide')
-    shuffledQuestions = myQuestions.sort(() => Math.random() - .5)
+    //shuffledQuestions = myQuestions.sort(() => Math.random() - .5)
     currentQuestionsIndex = 0
     questionsContainerElement.classList.remove('hide')
     setNextQuestion()
@@ -17,16 +21,56 @@ function startGame() {
 };
 
 function setNextQuestion() {
-    showquestions(shuffledQuestions[currentQuestionsIndex])
+    showQuestions(shuffledQuestions[currentQuestionsIndex])
 };
 function showQuestions(question){
-    questionElement.innerText = myQuestion.myQuestion
+    questionElement.innerText = myQuestion.question
+    question.answer.foreach(answer => {
+        const button = document.createElement('button')
+        button.innerText = answer.text 
+        button.classList.add('btn')
+        if(answer.correct){
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener('click', selectAnswer)
+        answerButtonsElements.appendChild(button)
+    })
+   
 };
-
-function selectAnswer() {
-
+function resestState(){
+    nextButton.classList.add('hide')
+    while (answerButtonsElements.firstChild){
+        answerButtonsElements.removeChild
+        (answerButtonsElements.firstChild)
+    }
 };
-
+function selectAnswer(e) {
+    const selectedButton = e.target
+    const correct =selectedButton.dataset.correctAnswer
+    setStatusClass(document.body, correct)
+    Array.from(answerButtonsElements.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+    })
+    if (shuffledQuestoins.length > currentQuestionsIndex + 1){
+    nextButton.classList.remove('hide')
+    } else {
+        startButton.innterText = 'Restart'
+        startButton.classList.remove('hide')
+    }
+};
+function setStatusClass(element, correctAnswer){
+    clearStatusClass(element)
+    if(correctAnswer){
+        element.classList.add('correct')
+    }else{
+        element.classList.add('wrong')
+    }
+};
+function clearStatusClass(element){
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
+}
+ // 5-6 questions
 const myQuestions = [
     {
         question: "What is a function",
@@ -71,6 +115,6 @@ const myQuestions = [
 ]
 
     //link start button to the timer, build a funtion
-    // 5-6 questions 
+    
     //let timerStart = setTimeout(())
 
