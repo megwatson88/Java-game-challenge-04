@@ -4,7 +4,7 @@ let shuffledQuestions, currentQuestionsIndex;
 const questionElement = document.getElementById('question');
 const answerButtonsElements = document.getElementById('answer-buttons');
 const nextButton = document.getElementById('next-btn');
-
+let countRightAnswer = 0;
 
 startButton.addEventListener('click', startGame);
 
@@ -20,27 +20,31 @@ function startGame() {
     currentQuestionsIndex = 0
     questionsContainerElement.classList.remove('hide')
     setNextQuestion()
+    countRightAnswer = 0
 
 };
 
 function setNextQuestion() {
+    resestState()
     showQuestions(shuffledQuestions[currentQuestionsIndex])
 };
+
 function showQuestions(myQuestion) {
-    questionElement.innerText = myQuestion.question
-    myQuestion.answers.forEach(answers => {
-        const button = document.createElement('button')
-        button.innerText = answers.text
-        button.classList.add('btn')
-        if (answers.correct) {
-            button.dataset.correct = answers.answersCorrect
-        }
-        button.addEventListener('click', selectAnswer)
-        answerButtonsElements.appendChild(button)
-    })
+    questionElement.innerText = myQuestion.question,
+        myQuestion.answers.forEach(answers => {
+            const button = document.createElement('button')
+            button.innerText = answers.text
+            button.classList.add('btn')
+            if (answers.correct) {
+                button.dataset.correct = answers.answersCorrect
+            }
+            button.addEventListener('click', selectAnswer)
+            answerButtonsElements.appendChild(button)
+        })
 
 };
 function resestState() {
+    clearStatusClass(document.body)
     nextButton.classList.add('hide')
     while (answerButtonsElements.firstChild) {
         answerButtonsElements.removeChild
@@ -52,15 +56,17 @@ function selectAnswer(e) {
     const correct = selectedButton.dataset.correctAnswer
     setStatusClass(document.body, correct)
     Array.from(answerButtonsElements.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
+        setStatusClass(button, button.dataset.correctAnswer)
     })
-    if (shuffledQuestoins.length > currentQuestionsIndex + 1) {
+    if (shuffledQuestions.length > currentQuestionsIndex + 1) {
         nextButton.classList.remove('hide')
     } else {
         startButton.innterText = 'Restart'
         startButton.classList.remove('hide')
     }
+
 };
+
 function setStatusClass(element, correctAnswer) {
     clearStatusClass(element)
     if (correctAnswer) {
@@ -78,12 +84,11 @@ const myQuestions = [
     {
         question: "What is a function",
         answers: [
-            'A procedure to perform tasks or calculate a value.',
-            'y=mx+b',
-            'Direct Object Model',
-            'Application Programing Interface'
+            { text:'A procedure to perform tasks or calculate a value.', correct: true},
+            { text: 'y=mx+b', correct: false},
+            { text: 'Direct Object Model', correct: false}, 
+            { text: 'Application Programing Interface', correct: false}, 
         ],
-        correctAnswer: 'A procedure to perform tasks or calculate a value.'
     },
     {
         question: "What is pseudocode? ",
@@ -116,6 +121,8 @@ const myQuestions = [
         correctAnswer: "for(var i = 0; i< ;  i ++ ) {};"
     }
 ];
+
+
 
     //link start button to the timer, build a funtion
 

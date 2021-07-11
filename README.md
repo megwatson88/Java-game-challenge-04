@@ -15,4 +15,4 @@ This application will be used to test the understanding of basic JavaScript prin
 <li>Deployed website</li>
 
 # Resources 
-<a url="https://www.youtube.com/watch?v=riDzcEQbx6x" target=_blank> youtube
+<a url="https://www.youtube.com/watch?v=riDzcEQbx6x" target=_blank> youtube </a>
