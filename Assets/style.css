@@ -70,3 +70,7 @@ body{
 .hide {
     display: none;
 }
+.timer {
+    color: red;
+    display: right;
+}
