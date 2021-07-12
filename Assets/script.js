@@ -4,7 +4,8 @@ let shuffledQuestions, currentQuestionsIndex;
 const questionElement = document.getElementById('question');
 const answerButtonsElements = document.getElementById('answer-buttons');
 const nextButton = document.getElementById('next-btn');
-const resultsForm =document.getElementById('high-scores')
+const resultsForm =document.getElementById('high-scores');
+const countDownTimer = document.getElementById("timer");
 //used to count the number of correct answers
 let countRightAnswer = 0;
 
@@ -63,14 +64,13 @@ function selectAnswer(e) {
     if (shuffledQuestions.length > currentQuestionsIndex + 1) {
         nextButton.classList.remove('hide')
     } else {
-        startButton.innterText = 'Restart'
-        startButton.classList.remove('hide')
+        startButton.innterText = 'Restart';
+        startButton.classList.remove('hide');
     }
     if (correct) {
         countRightAnswer++;
     }
-document.getElementById('correct-answers').innerHTML = countRightAnswer;
-document.getElementById()
+    console.log(countRightAnswer)
 };
 
 function setStatusClass(element, correctAnswer) {
@@ -130,9 +130,10 @@ const myQuestions = [
 
     //link start button to the timer, build a funtion
 
-    //let timerStart = setTimeout(())
-//let timerStart = document.getElementById('timer');
-//addEventListener.on('click', timerStart);
-//timerStart = setTimeout(() +=> {
-   // console.log('endtime'),
-//}, 500);
+    function countDown(){
+        var timeLeft = 500;
+        var timeInterval = setInterval(function(){
+            
+        }, 1000)
+    };
+    startButton.onclick = countDown;
