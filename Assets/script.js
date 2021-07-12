@@ -4,6 +4,8 @@ let shuffledQuestions, currentQuestionsIndex;
 const questionElement = document.getElementById('question');
 const answerButtonsElements = document.getElementById('answer-buttons');
 const nextButton = document.getElementById('next-btn');
+const resultsForm =document.getElementById('high-scores')
+//used to count the number of correct answers
 let countRightAnswer = 0;
 
 startButton.addEventListener('click', startGame);
@@ -64,7 +66,11 @@ function selectAnswer(e) {
         startButton.innterText = 'Restart'
         startButton.classList.remove('hide')
     }
-
+    if (correct) {
+        countRightAnswer++;
+    }
+document.getElementById('correct-answers').innerHTML = countRightAnswer;
+document.getElementById()
 };
 
 function setStatusClass(element, correctAnswer) {
@@ -84,41 +90,39 @@ const myQuestions = [
     {
         question: "What is a function",
         answers: [
-            { text:'A procedure to perform tasks or calculate a value.', correct: true},
-            { text: 'y=mx+b', correct: false},
-            { text: 'Direct Object Model', correct: false}, 
-            { text: 'Application Programing Interface', correct: false}, 
+            { text: 'A procedure to perform tasks or calculate a value.', correct: true },
+            { text: 'y=mx+b', correct: false },
+            { text: 'Direct Object Model', correct: false },
+            { text: 'Application Programing Interface', correct: false },
         ],
     },
     {
         question: "What is pseudocode? ",
         answers: [
-            'A plain language description of the algorithm ',
-            'A partial language of pseudonyms ',
-            'A partial list of truths ',
-            'A code that is partial'
+            { text: 'A plain language description of the algorithm ', correct: true },
+            { text: 'A partial language of pseudonyms ', correct: false },
+            { text: 'A partial list of truths ', correct: false },
+            { text: 'A code that is partial', correct: false }
         ],
-        correctAnswer: 'A plain language description of the algorithm '
     },
     {
         question: "What is an array?",
         answers: [
-            "A dress code",
-            "A list",
-            "A French word for soda",
-            "A data structure that can include numbers or strings",
+            { text: "A dress code", correct: false },
+            { text: "A list", correct: false },
+            { text: "A French word for soda", correct: false },
+            { text: "A data structure that can include numbers or strings", correct: true },
         ],
-        correctAnswer: "A data structure that can include numbers or strings",
     },
     {
         question: "What is the correct for loop syntax?",
         answers: [
-            "for(var i = 0; i< ;  i ++ ) {};",
-            "For(var I = 0; i > ; I++) {}",
-            "For(var i = 0; i >; i++ ) {};",
-            "for (var i = 0; i > ; i++) { };",
+            { text: "for(var i = 0; i< var;  i ++ ) {};", correct: true },
+            { text: "For(var I = 0; i > var ; I++) {}", correct: false },
+            { text: "For(var i = 0; i >var ; i++ ) {};", correct: false },
+            { text: "for (var i = 0; i > var; i++) { };", correct: false },
         ],
-        correctAnswer: "for(var i = 0; i< ;  i ++ ) {};"
+
     }
 ];
 
