@@ -12,8 +12,8 @@ This application will be used to test the understanding of basic JavaScript prin
 </ol>
 
 # Links 
-<ul> <li>Github </li>
-<li>Deployed website</li>
+<ul> <li href="https://github.com/megwatson88/Java-game-challenge-04" target=_blank>Github </li>
+<li href=" https://megwatson88.github.io/Java-game-challenge-04/" target=_blank>Deployed website</li>
 
 # Resources 
 <a href="https://www.youtube.com/watch?v=riDzcEQbx6x" target=_blank> youtube </a>
