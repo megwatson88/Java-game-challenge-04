@@ -10,9 +10,10 @@ This application will be used to test the understanding of basic JavaScript prin
 <li>WHEN all questions are answered or the timer reaches 0 then the game is over</li>
 <li>WHEN the game is over then I can save my initials and score</li>
 </ol>
+
 # Links 
 <ul> <li>Github </li>
 <li>Deployed website</li>
 
 # Resources 
-<a url="https://www.youtube.com/watch?v=riDzcEQbx6x" target=_blank> youtube </a>
+<a href="https://www.youtube.com/watch?v=riDzcEQbx6x" target=_blank> youtube </a>
