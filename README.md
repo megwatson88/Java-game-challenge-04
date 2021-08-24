@@ -16,4 +16,5 @@ This application will be used to test the understanding of basic JavaScript prin
 <li href=" https://megwatson88.github.io/Java-game-challenge-04/" target=_blank>Deployed website</li>
 
 # Resources 
-<a href="https://www.youtube.com/watch?v=riDzcEQbx6x" target=_blank> youtube </a>
+<a href="https://www.youtube.com/watch?v=riDzcEQbX6k&t=717s" target=_blank> youtube </a>
+I used the tutorial entitled "Build A Quiz App With JavaScript" on youtube from Web Dev Simplified
